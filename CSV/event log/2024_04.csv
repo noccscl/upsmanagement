@@ -1,0 +1,87 @@
+Time,EventName,EventSource,ClientIP
+2024/04/03 09:48:01,AC failure,MCU Polling,----
+2024/04/03 09:48:08,Battery Mode,MCU Polling,----
+2024/04/03 09:50:55,Line Mode,MCU Polling,----
+2024/04/03 09:50:57,AC recovery,MCU Polling,----
+2024/04/05 01:16:14,Battery Mode,MCU Polling,----
+2024/04/05 01:16:17,AC failure,MCU Polling,----
+2024/04/05 01:17:25,AC recovery,MCU Polling,----
+2024/04/05 01:17:32,Line Mode,MCU Polling,----
+2024/04/05 05:33:22,Connect to time server error,SNTP,----
+2024/04/05 11:18:07,Battery Mode,MCU Polling,----
+2024/04/05 11:18:09,AC failure,MCU Polling,----
+2024/04/05 11:20:06,AC recovery,MCU Polling,----
+2024/04/05 11:20:13,Line Mode,MCU Polling,----
+2024/04/05 17:33:22,Connect to time server error,SNTP,----
+2024/04/06 05:33:23,Connect to time server error,SNTP,----
+2024/04/06 17:33:22,Connect to time server error,SNTP,----
+2024/04/07 05:33:23,Connect to time server error,SNTP,----
+2024/04/07 17:33:21,Connect to time server error,SNTP,----
+2024/04/08 05:33:21,Connect to time server error,SNTP,----
+2024/04/08 17:33:23,Connect to time server error,SNTP,----
+2024/04/09 05:33:23,Connect to time server error,SNTP,----
+2024/04/09 09:59:11,Battery Mode,MCU Polling,----
+2024/04/09 09:59:13,AC failure,MCU Polling,----
+2024/04/09 10:00:12,AC recovery,MCU Polling,----
+2024/04/09 10:00:19,Line Mode,MCU Polling,----
+2024/04/09 17:33:23,Connect to time server error,SNTP,----
+2024/04/09 18:48:27,Battery Mode,MCU Polling,----
+2024/04/09 18:48:29,AC failure,MCU Polling,----
+2024/04/09 18:51:54,AC recovery,MCU Polling,----
+2024/04/09 18:52:01,Line Mode,MCU Polling,----
+2024/04/09 19:15:51,AC failure,MCU Polling,----
+2024/04/09 19:15:58,Battery Mode,MCU Polling,----
+2024/04/09 19:20:25,AC recovery,MCU Polling,----
+2024/04/09 19:20:32,Line Mode,MCU Polling,----
+2024/04/10 05:33:23,Connect to time server error,SNTP,----
+2024/04/10 17:33:22,Connect to time server error,SNTP,----
+2024/04/11 05:33:22,Connect to time server error,SNTP,----
+2024/04/12 15:46:29,Battery Mode,MCU Polling,----
+2024/04/12 15:46:32,AC failure,MCU Polling,----
+2024/04/12 16:47:51,AC recovery,MCU Polling,----
+2024/04/12 16:47:59,Line Mode,MCU Polling,----
+2024/04/13 10:37:16,Battery Mode,MCU Polling,----
+2024/04/13 10:37:19,AC failure,MCU Polling,----
+2024/04/13 10:40:44,AC recovery,MCU Polling,----
+2024/04/13 10:40:51,Line Mode,MCU Polling,----
+2024/04/15 08:36:09,Battery Mode,MCU Polling,----
+2024/04/15 08:36:12,AC failure,MCU Polling,----
+2024/04/15 08:39:56,AC recovery,MCU Polling,----
+2024/04/15 08:40:03,Line Mode,MCU Polling,----
+2024/04/16 19:32:21,Battery Mode,MCU Polling,----
+2024/04/16 19:32:24,AC failure,MCU Polling,----
+2024/04/16 19:33:13,AC recovery,MCU Polling,----
+2024/04/16 19:33:20,Line Mode,MCU Polling,----
+2024/04/17 12:28:07,Battery Mode,MCU Polling,----
+2024/04/17 12:28:10,AC failure,MCU Polling,----
+2024/04/17 12:32:41,Line Mode,MCU Polling,----
+2024/04/17 12:32:44,AC recovery,MCU Polling,----
+2024/04/19 16:44:03,Battery Mode,MCU Polling,----
+2024/04/19 16:44:06,AC failure,MCU Polling,----
+2024/04/19 17:31:07,Connect to time server error,SNTP,----
+2024/04/19 18:34:33,AC recovery,MCU Polling,----
+2024/04/19 18:34:41,Line Mode,MCU Polling,----
+2024/04/19 20:11:27,Battery Mode,MCU Polling,----
+2024/04/19 20:11:30,AC failure,MCU Polling,----
+2024/04/19 20:16:32,AC recovery,MCU Polling,----
+2024/04/19 20:16:39,Line Mode,MCU Polling,----
+2024/04/20 15:28:00,Battery Mode,MCU Polling,----
+2024/04/20 15:28:04,AC failure,MCU Polling,----
+2024/04/20 15:36:42,AC recovery,MCU Polling,----
+2024/04/20 15:36:49,Line Mode,MCU Polling,----
+2024/04/21 10:59:35,AC failure,MCU Polling,----
+2024/04/21 10:59:42,Battery Mode,MCU Polling,----
+2024/04/21 12:35:05,AC recovery,MCU Polling,----
+2024/04/21 12:35:12,Line Mode,MCU Polling,----
+2024/04/23 10:00:30,AC failure,MCU Polling,----
+2024/04/23 10:00:37,Battery Mode,MCU Polling,----
+2024/04/23 13:19:23,Line Mode,MCU Polling,----
+2024/04/23 13:19:26,AC recovery,MCU Polling,----
+2024/04/23 16:38:22,Battery Mode,MCU Polling,----
+2024/04/23 16:38:26,AC failure,MCU Polling,----
+2024/04/23 16:43:28,AC recovery,MCU Polling,----
+2024/04/23 16:43:35,Line Mode,MCU Polling,----
+2024/04/29 10:09:02,AC failure,MCU Polling,----
+2024/04/29 10:09:10,Battery Mode,MCU Polling,----
+2024/04/29 10:34:06,AC recovery,MCU Polling,----
+2024/04/29 10:34:13,Line Mode,MCU Polling,----
