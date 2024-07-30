@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPS Management Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.4.0/dist/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">UPS Management</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        <div id="zeroVoltageEntries">
+            <h2>Entries with Input Voltage 0</h2>
+            <table id="zeroVoltageTable">
+                <thead>
+                    <tr id="tableHeader"></tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+        
+    </header>
+    <div class="container">
+        <h1>UPS Management Dashboard</h1>
+        <input type="file" id="fileInput" webkitdirectory multiple>
+        <input type="date" id="startDate">
+        <input type="date" id="endDate">
+        <button id="processButton">Process Files</button>
+        <button id="exportButton">Export as PDF</button>
+        <div id="results">
+            <p>Total entries: <span id="totalEntries"></span></p>
+            <p>Battery mode entries: <span id="batteryEntries"></span></p>
+            <p>Ratio of battery mode entries to total entries: <span id="ratio"></span></p>
+        </div>
+        <canvas id="pieChart" width="400" height="400"></canvas>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

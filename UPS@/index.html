@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to UPS Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Styles for animated header */
+        .large-header {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        #large-header {
+            background-image: url('2.jpg');
+            background-size: cover;
+            background-position: center center;
+            height: 100vh;
+        }
+
+        .main-title {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            color: #f9f1e9;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%,-50%,0);
+            font-size: 4.2em;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .main-title .thin {
+            font-weight: 200;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="large-header" class="large-header">
+            <canvas id="demo-canvas"></canvas>
+            <h1 class="main-title">UPS Management System</h1>
+        </div>
+        <nav class="navbar">
+            <div class="logo">UPS Management</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">How it works</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="home" class="landing-container">
+        <div class="landing-content">
+            <h1>UPS Management Services</h1>
+            <p>Monitor your UPS status including uptime, downtime, and battery mode status.</p>
+            <a href="dashboard.html" class="btn">Go to Dashboard</a>
+        </div>
+    </div>
+
+    <div id="about" class="about-container">
+        <div class="about-header">
+            <h2>HOW IT WORKS</h2>
+            <p>Learn More about how our website works</p>
+        </div>
+        <div class="about-content">
+            <div class="about-item">
+                <div class="icon">
+                    <img src="images.png" alt="Choose what to do">
+                </div>
+                <h3>Choose what to Do</h3>
+                <p>Decide the type of monitoring you need for your UPS. You can choose to monitor uptime, downtime, battery status, and more.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="about-item">
+                <div class="icon">
+                    <img src="images (1).png" alt="Find what you want">
+                </div>
+                <h3>Find what you want</h3>
+                <p>Easily navigate through the dashboard to find detailed reports on UPS performance, battery status, and maintenance schedules.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="about-item">
+                <div class="icon">
+                    <img src="images (2).png" alt="Explore amazing Place">
+                </div>
+                <h3>Explore amazing Place</h3>
+                <p>Discover all the advanced features of our system, including real-time alerts, detailed analytics, and historical data tracking to ensure optimal performance of your UPS.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="services" class="services-container">
+        <h2>Services</h2>
+        <p>We offer a comprehensive suite of UPS management services to ensure optimal performance and peace of mind.</p>
+        <div class="services-list">
+            <div class="service-item">
+                <h3>Real-time Monitoring</h3>
+                <p>Gain immediate insights into your UPS status, including power supply, battery level, and uptime.</p>
+            </div>
+            <div class="service-item">
+                <h3>Event Logs</h3>
+                <p>Maintain logs of significant events like power outages and transitions between battery and normal operation.</p>
+            </div>
+            <div class="service-item">
+                <h3>Detailed Battery Health Reports</h3>
+                <p>Generate reports on remaining capacity, runtime, charge/discharge cycles, internal resistance, and temperature.</p>
+            </div>
+            <div class="service-item">
+                <h3>Predictive Battery Maintenance</h3>
+                <p>Analyze battery health data to predict failures and generate alerts for proactive battery replacement.</p>
+            </div>
+            <div class="service-item">
+                <h3>Battery Capacity Testing</h3>
+                <p>Initiate controlled battery discharge tests to assess runtime capability and compare with historical data.</p>
+            </div>
+            <div class="service-item">
+                <h3>Customizable Alerts</h3>
+                <p>Configure notifications for low battery levels, unexpected discharges, and other significant events.</p>
+            </div>
+            <div class="service-item">
+                <h3>Historical Data Analysis and Trending</h3>
+                <p>Visualize battery health data over time to identify performance trends and plan maintenance schedules.</p>
+            </div>
+            <div class="service-item">
+                <h3>Integration with Third-Party Systems</h3>
+                <p>Integrate with existing network monitoring platforms for centralized data collection and analysis.</p>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+    <script>
+        // Animated Header JavaScript
+        (function() {
+
+            var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
+
+            // Main
+            initHeader();
+            initAnimation();
+            addListeners();
+
+            function initHeader() {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                target = {x: width/2, y: height/2};
+
+                largeHeader = document.getElementById('large-header');
+                largeHeader.style.height = height+'px';
+
+                canvas = document.getElementById('demo-canvas');
+                canvas.width = width;
+                canvas.height = height;
+                ctx = canvas.getContext('2d');
+
+                // create points
+                points = [];
+                for(var x = 0; x < width; x = x + width/20) {
+                    for(var y = 0; y < height; y = y + height/20) {
+                        var px = x + Math.random()*width/20;
+                        var py = y + Math.random()*height/20;
+                        var p = {x: px, originX: px, y: py, originY: py };
+                        points.push(p);
+                    }
+                }
+
+                // for each point find the 5 closest points
+                for(var i = 0; i < points.length; i++) {
+                    var closest = [];
+                    var p1 = points[i];
+                    for(var j = 0; j < points.length; j++) {
+                        var p2 = points[j]
+                        if(!(p1 == p2)) {
+                            var placed = false;
+                            for(var k = 0; k < 5; k++) {
+                                if(!placed) {
+                                    if(closest[k] == undefined) {
+                                        closest[k] = p2;
+                                        placed = true;
+                                    }
+                                }
+                            }
+
+                            for(var k = 0; k < 5; k++) {
+                                if(!placed) {
+                                    if(getDistance(p1, p2) < getDistance(p1, closest[k])) {
+                                        closest[k] = p2;
+                                        placed = true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    p1.closest = closest;
+                }
+
+                // assign a circle to each point
+                for(var i in points) {
+                    var c = new Circle(points[i], 2+Math.random()*2, 'rgba(255,255,255,0.3)');
+                    points[i].circle = c;
+                }
+            }
+
+            // Event handling
+            function addListeners() {
+                if(!('ontouchstart' in window)) {
+                    window.addEventListener('mousemove', mouseMove);
+                }
+                window.addEventListener('resize', resize);
+            }
+
+            function mouseMove(e) {
+                var posx = posy = 0;
+                if(e.pageX || e.pageY) {
+                    posx = e.pageX;
+                    posy = e.pageY;
+                }
+                else if(e.clientX || e.clientY) {
+                    posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+                    posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+                }
+                target.x = posx;
+                target.y = posy;
+            }
+
+            function resize() {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                largeHeader.style.height = height+'px';
+                canvas.width = width;
+                canvas.height = height;
+            }
+
+            function initAnimation() {
+                animate();
+                for(var i in points) {
+                    shiftPoint(points[i]);
+                }
+            }
+
+            function animate() {
+                if(animateHeader) {
+                    ctx.clearRect(0,0,width,height);
+                    for(var i in points) {
+                        // detect points in range
+                        if(Math.abs(getDistance(target, points[i])) < 4000) {
+                            points[i].active = 0.3;
+                            points[i].circle.active = 0.6;
+                        }
+                        else if(Math.abs(getDistance(target, points[i])) < 15000) {
+                            points[i].active = 0.1;
+                            points[i].circle.active = 0.3;
+                        }
+                        else {
+                            points[i].active = 0.1;
+                            points[i].circle.active = 0;
+                        }
+
+                        drawLine(points[i]);
+                        points[i].circle.draw();
+                    }
+                }
+                requestAnimationFrame(animate);
+            }
+
+            function drawLine(p) {
+                if(!p.active) return;
+                for(var i in p.closest) {
+                    var p2 = p.closest[i];
+                    if(p2.active) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.strokeStyle = 'rgba(255,255,255,'+p.active+')';
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            function shiftPoint(p) {
+                TweenLite.to(p, 1 + Math.random(), {
+                    x: p.originX - 50 + Math.random() * 100,
+                    y: p.originY - 50 + Math.random() * 100,
+                    ease: Circ.easeInOut,
+                    onComplete: function() {
+                        shiftPoint(p);
+                    }
+                });
+            }
+
+            function getDistance(p1, p2) {
+                return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
+            }
+
+            // Canvas / Circle
+            function Circle(pos, rad, color) {
+                var _this = this;
+
+                // constructor
+                (function() {
+                    _this.pos = pos || null;
+                    _this.radius = rad || null;
+                    _this.color = color || null;
+                })();
+
+                this.draw = function() {
+                    if(!_this.pos) return;
+                    ctx.beginPath();
+                    ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
+                    ctx.fillStyle = _this.color;
+                    ctx.fill();
+                };
+            }
+        })();
+    </script>
+</body>
+</html>
