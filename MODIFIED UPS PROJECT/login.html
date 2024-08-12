@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Back to Home Button -->
+        <a href="index.html" class="back-home-button">← Home</a>
+
+        <div class="login-box">
+            <div class="profile-img">
+                <img src="3.webp" alt="Profile Picture">
+            </div>
+            <h2>WELCOME</h2> 
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="input-group">
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit">Login</button>
+                <a href="#" class="forgot-link">Forgot Username / Password?</a>
+                <a href="#" class="create-account">Create new account →</a>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
